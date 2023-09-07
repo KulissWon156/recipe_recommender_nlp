@@ -6,6 +6,9 @@ I usually get frustrated by the last-minute hassle of finding out a relevant rec
 
 Motivated by this need, I decided to build a **recommender system to suggest recipes based on user input.**
 
+![image1](Featured-leaving-fridge-open.jpg)
+
+
 **Recommender Systems** are employed everywhere in most of the apps that we use. It automatically suggests the relevant options, topics, music, food, and movies to help us make better choices. When it comes to implementing NLP in recommender, it utilizes the similarity of the content. In this project we are using NLP content-based filtering to suggest users with top recipes relevant to what data they enter - be it recipe name, or ingredient list.  
 
 In our project we only have text data of recipes, we don't have metadata like cuisine type, difficulty level, cook-time, seasonal data, or user-generated content (e.g., comments, votes, and reviews).
@@ -27,6 +30,17 @@ Approach to solve this problem :
   - First, Using TF-IDF vectorization to vectorize recipes and user input. Employing cosine similarity to recommend the top five recipes.
   - Second, Using word2Vec embeddings and finding cosine similarity on user input and recipes.
   - Third, using Gensim-based LDA on the BOW model and cosine similarity.
-5. Visually inspecting the result since, I don't have labeled data and determining which model is giving me the best result. Alternate approach, I will try to fine tune the model that gives me the highest average cosine score.
+5. Visually inspecting the result since, I don't have labeled data and determining which model is giving me the best result. I will try to fine tune the model that gives me the highest average cosine score.
 
 Below is the high-level diagram of the steps involved in the project.
+
+![image2](Project-flow-diagram.png)
+
+Through this project I was trying to learn NLP better and utilized it practically by implementing the concepts in recommending recipes. I am sure more can be done to improve this and if there are any queries, improvements and comments please feel free to let me know.
+
+
+**References**
+- [https://eightportions.com/datasets/Recipes/](https://eightportions.com/datasets/Recipes/)
+- [https://towardsdatascience.com/building-a-recipe-recommendation-api-using-scikit-learn-nltk-docker-flask-and-heroku-bfc6c4bdd2d4](https://towardsdatascience.com/building-a-recipe-recommendation-api-using-scikit-learn-nltk-docker-flask-and-heroku-bfc6c4bdd2d4)
+- [https://github.com/JohnVillanueva/Recipe-Recommendation-System](https://github.com/JohnVillanueva/Recipe-Recommendation-System)
+- [https://medium.com/@hajar.zankadi/using-latent-dirichlet-allocation-lda-and-nlp-techniques-to-predict-interest-tags-from-tweets-d0e275b1032d](https://medium.com/@hajar.zankadi/using-latent-dirichlet-allocation-lda-and-nlp-techniques-to-predict-interest-tags-from-tweets-d0e275b1032d)
