@@ -10,3 +10,23 @@ Motivated by this need, I decided to build a **recommender system to suggest rec
 
 In our project we only have text data of recipes, we don't have metadata like cuisine type, difficulty level, cook-time, seasonal data, or user-generated content (e.g., comments, votes, and reviews).
 
+
+## Project Plan
+
+In this project, I am trying to recommend the top five recipes based on user input text data.
+Approach to solve this problem :
+1. I am utilizing data scrapped by Ryan Lee and presently available publically on the website [RecipeBox](https://eightportions.com/datasets/Recipes/) which contains 125,000 scraped recipes from three websites (Foodnetwork.com, Epicurious.com, and Allrecipes.com).
+2. First, my approach is to preprocess the data in context to -
+  - Handling null values and duplicates.
+  - Deleting unnecessary rows where the information may be incorrect.
+  - Adding all text together and standardizing it for natural language processing.
+        - Remove stop words, punctuations, and numbers.
+        - Change to lowercase and do lemmatization on the text data.
+3. Doing some exploratory data analysis like most common ingredients etc.
+4. After cleaning the text and preprocessing it, I am employing the below approaches to recommend recipes based on user input.
+  - First, Using TF-IDF vectorization to vectorize recipes and user input. Employing cosine similarity to recommend the top five recipes.
+  - Second, Using word2Vec embeddings and finding cosine similarity on user input and recipes.
+  - Third, using Gensim-based LDA on the BOW model and cosine similarity.
+5. Visually inspecting the result since, I don't have labeled data and determining which model is giving me the best result. Alternate approach, I will try to fine tune the model that gives me the highest average cosine score.
+
+Below is the high-level diagram of the steps involved in the project.
